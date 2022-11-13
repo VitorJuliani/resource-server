@@ -32,7 +32,7 @@ class CachedRedisTokenIntrospector(
                 this.template.opsForValue().set(
                     token,
                     this.mapper.writeValueAsString(it),
-                    this.expiresInSeconds.minus(5),
+                    this.expiresInSeconds,
                     TimeUnit.SECONDS
                 )
             }
