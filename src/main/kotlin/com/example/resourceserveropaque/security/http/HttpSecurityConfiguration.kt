@@ -14,7 +14,7 @@ class HttpSecurityConfiguration {
         return http
             .authorizeRequests {
                 it.mvcMatchers(HttpMethod.GET, "/api/v1/greeting").hasRole("USER")
-                it.anyRequest().authenticated()
+                it.anyRequest().permitAll()
             }
             .oauth2ResourceServer { it.opaqueToken() }
             .build()
