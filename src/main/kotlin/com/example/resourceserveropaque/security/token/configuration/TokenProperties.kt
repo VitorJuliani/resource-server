@@ -9,6 +9,6 @@ data class TokenProperties(
     val cache: CacheProperties
 ) {
     data class CacheProperties(
-        val expiresInSeconds: Long
+        val expiresInMilliseconds: Long
     )
 }

@@ -29,7 +29,8 @@ class TokenConfiguration(
         redisTemplate: RedisTemplate<String, String>,
         tokenProperties: TokenProperties,
         @Qualifier("OpaqueTokenIntrospector") delegate: OpaqueTokenIntrospector
-    ): OpaqueTokenIntrospector = CachedRedisTokenIntrospector(redisTemplate, mapper, delegate, tokenProperties.cache.expiresInSeconds)
+    ): OpaqueTokenIntrospector =
+        CachedRedisTokenIntrospector(redisTemplate, mapper, delegate, tokenProperties.cache.expiresInMilliseconds)
 
     @Bean
     @Qualifier(value = "OpaqueTokenIntrospector")

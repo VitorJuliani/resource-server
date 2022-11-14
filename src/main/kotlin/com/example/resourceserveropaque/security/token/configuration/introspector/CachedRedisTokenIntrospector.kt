@@ -16,7 +16,7 @@ class CachedRedisTokenIntrospector(
     private val template: RedisTemplate<String, String>,
     private val mapper: ObjectMapper,
     private val delegate: OpaqueTokenIntrospector,
-    private val expiresInSeconds: Long
+    private val expiresInMilliseconds: Long
 ) : OpaqueTokenIntrospector {
 
     override fun introspect(token: String): OAuth2AuthenticatedPrincipal {
@@ -32,8 +32,8 @@ class CachedRedisTokenIntrospector(
                 this.template.opsForValue().set(
                     token,
                     this.mapper.writeValueAsString(it),
-                    this.expiresInSeconds,
-                    TimeUnit.SECONDS
+                    this.expiresInMilliseconds.minus(1),
+                    TimeUnit.MILLISECONDS
                 )
             }
     }

@@ -12,7 +12,7 @@ spring:
 
 token:
   cache:
-    expiresInSeconds: 300
+    expiresInMilliseconds: 300000
 
 springdoc:
   swagger-ui:
