@@ -16,14 +16,23 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
-	runtimeOnly("com.nimbusds:oauth2-oidc-sdk:10.0")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-	implementation("org.springframework.boot:spring-boot-starter-data-redis")
-	implementation("org.springdoc:springdoc-openapi-ui:1.6.12")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+	// RESOURCE SERVER
+	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
+	runtimeOnly("com.nimbusds:oauth2-oidc-sdk:10.0")
+
+	// CACHE
+	implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
+	// OPEN API
+	implementation("org.springdoc:springdoc-openapi-ui:1.6.12")
+	implementation("org.springdoc:springdoc-openapi-security:1.6.12")
+	implementation("org.springdoc:springdoc-openapi-kotlin:1.6.12")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 }

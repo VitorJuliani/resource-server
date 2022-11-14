@@ -13,7 +13,3 @@ spring:
 token:
   cache:
     expiresInMilliseconds: 300000
-
-springdoc:
-  swagger-ui:
-    path: /swagger-ui.html

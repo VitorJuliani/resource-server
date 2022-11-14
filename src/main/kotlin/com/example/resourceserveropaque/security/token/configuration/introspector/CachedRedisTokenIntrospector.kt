@@ -38,7 +38,7 @@ class CachedRedisTokenIntrospector(
             }
     }
 
-    data class CachedOAuth2AuthenticatedPrincipal(
+    private data class CachedOAuth2AuthenticatedPrincipal(
         val name: String,
         val authorities: Collection<Map<String, String>>,
         val attributes: Map<String, Any>

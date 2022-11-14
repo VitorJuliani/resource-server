@@ -30,5 +30,5 @@ class KeycloakRealmRoleAuthoritiesTokenIntrospector(
             ?: emptyList()
     }
 
-    data class RealmAccess(val roles: List<String>)
+    private data class RealmAccess(val roles: List<String>)
 }

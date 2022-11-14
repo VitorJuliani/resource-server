@@ -14,7 +14,8 @@ class HttpSecurityConfiguration {
         return http
             .authorizeRequests {
                 it.mvcMatchers(HttpMethod.GET, "/api/v1/greeting").hasRole("USER")
-                it.anyRequest().permitAll()
+                it.mvcMatchers(HttpMethod.GET, "/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                it.anyRequest().authenticated()
             }
             .oauth2ResourceServer { it.opaqueToken() }
             .build()
