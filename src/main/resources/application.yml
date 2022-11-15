@@ -13,3 +13,6 @@ spring:
 token:
   cache:
     expiresInMilliseconds: 300000
+
+dogService:
+  baseUrl: https://dog-facts-api.herokuapp.com

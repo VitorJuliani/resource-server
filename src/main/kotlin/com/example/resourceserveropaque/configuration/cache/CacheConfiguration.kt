@@ -1,4 +1,4 @@
-package com.example.resourceserveropaque.cache
+package com.example.resourceserveropaque.configuration.cache
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

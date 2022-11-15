@@ -1,4 +1,4 @@
-package com.example.resourceserveropaque.security.token.configuration
+package com.example.resourceserveropaque.configuration.token
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConstructorBinding

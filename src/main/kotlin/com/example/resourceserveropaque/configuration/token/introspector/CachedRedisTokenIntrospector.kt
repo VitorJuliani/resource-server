@@ -1,7 +1,7 @@
-package com.example.resourceserveropaque.security.token.configuration.introspector
+package com.example.resourceserveropaque.configuration.token.introspector
 
-import com.example.resourceserveropaque.security.token.const.KeycloakTokenAttributresClaimNames.EXT
-import com.example.resourceserveropaque.security.token.const.KeycloakTokenAttributresClaimNames.IAT
+import com.example.resourceserveropaque.configuration.token.const.KeycloakTokenAttributresClaimNames.EXT
+import com.example.resourceserveropaque.configuration.token.const.KeycloakTokenAttributresClaimNames.IAT
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.data.redis.core.RedisTemplate
 import org.springframework.security.core.GrantedAuthority

@@ -1,6 +1,6 @@
 package com.example.resourceserveropaque
 
-import com.example.resourceserveropaque.security.token.configuration.TokenProperties
+import com.example.resourceserveropaque.configuration.token.TokenProperties
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication

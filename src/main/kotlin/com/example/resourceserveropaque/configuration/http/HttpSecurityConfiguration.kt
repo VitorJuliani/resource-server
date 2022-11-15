@@ -1,4 +1,4 @@
-package com.example.resourceserveropaque.security.http
+package com.example.resourceserveropaque.configuration.http
 
 import org.springframework.context.annotation.Bean
 import org.springframework.http.HttpMethod
@@ -13,7 +13,7 @@ class HttpSecurityConfiguration {
     fun filterChain(http: HttpSecurity): SecurityFilterChain {
         return http
             .authorizeRequests {
-                it.mvcMatchers(HttpMethod.GET, "/api/v1/greeting").hasRole("USER")
+                it.mvcMatchers(HttpMethod.GET, "/api/v1/dogs/**").hasRole("USER")
                 it.mvcMatchers(HttpMethod.GET, "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 it.anyRequest().authenticated()
             }

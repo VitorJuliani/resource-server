@@ -33,6 +33,9 @@ dependencies {
 	implementation("org.springdoc:springdoc-openapi-security:1.6.12")
 	implementation("org.springdoc:springdoc-openapi-kotlin:1.6.12")
 
+	// WEB CLIENT
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 }

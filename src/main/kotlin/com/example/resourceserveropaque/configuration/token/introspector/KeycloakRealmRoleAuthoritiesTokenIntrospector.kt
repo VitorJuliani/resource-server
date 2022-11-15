@@ -1,6 +1,6 @@
-package com.example.resourceserveropaque.security.token.configuration.introspector
+package com.example.resourceserveropaque.configuration.token.introspector
 
-import com.example.resourceserveropaque.security.token.const.KeycloakTokenAttributresClaimNames.REALM_ACCESS
+import com.example.resourceserveropaque.configuration.token.const.KeycloakTokenAttributresClaimNames.REALM_ACCESS
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority

@@ -1,7 +1,7 @@
-package com.example.resourceserveropaque.security.token.configuration
+package com.example.resourceserveropaque.configuration.token
 
-import com.example.resourceserveropaque.security.token.configuration.introspector.CachedRedisTokenIntrospector
-import com.example.resourceserveropaque.security.token.configuration.introspector.KeycloakRealmRoleAuthoritiesTokenIntrospector
+import com.example.resourceserveropaque.configuration.token.introspector.CachedRedisTokenIntrospector
+import com.example.resourceserveropaque.configuration.token.introspector.KeycloakRealmRoleAuthoritiesTokenIntrospector
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.beans.factory.annotation.Value
