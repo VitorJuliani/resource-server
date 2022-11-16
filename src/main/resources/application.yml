@@ -5,7 +5,7 @@ spring:
         opaque:
           introspection-uri: http://localhost:8081/auth/realms/Study/protocol/openid-connect/token/introspect
           introspection-client-id: springboot-study-oauth
-          introspection-client-secret: SIXe65im12CNtokb8GKLeYLqCzVFA5rq
+          introspection-client-secret: yNBZdbsEC8VxJWYAXA5vGIyZBnKOjHWN
   redis:
     host: localhost
     port: 6379
