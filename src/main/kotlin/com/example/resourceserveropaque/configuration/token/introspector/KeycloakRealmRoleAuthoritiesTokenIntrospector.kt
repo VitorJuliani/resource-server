@@ -25,7 +25,6 @@ class KeycloakRealmRoleAuthoritiesTokenIntrospector(
             ?.toString()
             ?.let { mapper.readValue(it, RealmAccess::class.java) }
             ?.roles
-            ?.map { "ROLE_$it" }
             ?.map(::SimpleGrantedAuthority)
             ?: emptyList()
     }

@@ -13,7 +13,7 @@ class HttpSecurityConfiguration {
     fun filterChain(http: HttpSecurity): SecurityFilterChain {
         return http
             .authorizeRequests {
-                it.mvcMatchers(HttpMethod.GET, "/api/v1/dogs/**").hasRole("USER")
+                it.mvcMatchers(HttpMethod.GET, "/api/v1/dogs/**").hasAuthority("USER")
                 it.mvcMatchers(HttpMethod.GET, "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 it.anyRequest().authenticated()
             }
